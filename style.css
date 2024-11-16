@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+nav {
+    width: 100%;
+    height: 12vh;
+    background-color: #050445;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    z-index: 99999999;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+nav .logo img {
+    width: 60px; /* If you add an image */
+}
+
+nav .navigation {
+    display: flex;
+    gap: 40px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.navigation a:hover {
+    color: var(--secondary-color); /* Change color on hover */
+}
+
+/* Optional styles for the hamburger menu */
+.hamburger {
+    display: none; /* Hidden by default */
+    font-size: 30px; /* Font size for the hamburger icon */
+    color: white;
+    cursor: pointer; /* Hand cursor on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav .navigation {
+        display: none; /* Hide navigation on small screens */
+        flex-direction: column; /* Stack items vertically */
+        position: absolute;
+        top: 12vh; /* Position below the navbar */
+        left: 0;
+        background-color: #050445; /* Match the navbar color */
+        width: 100%;
+    }
+
+    .navigation.show {
+        display: flex; /* Show the navigation when toggled */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger menu on small screens */
+    }
+}
+
+:root {
+    --base-padding: 20px;
+    --base-margin: 20px;
+    --primary-color: #003147;
+    --secondary-color: #049afc;
+    --button-color: #4CAF50;
+    --button-hover-color: #45a049;
+    --edit-button-color: #4c7faf;
+}
+
+/* Body Styles */
+body {
+    /* background: rgb(2,0,36); */
+    background-repeat: no-repeat;
+    background-color: white;
+    /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 33%, rgba(162,0,255,1) 100%); */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Container Styles */
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background-color: whitesmoke;
+    margin: var(--base-margin);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Side Styles */
+.container .left_side {
+    position: relative;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(5,4,69,1) 30%, rgba(9,9,121,1) 74%, rgba(162,0,255,1) 100%);
+    padding: var(--base-padding);
+}
+
+/* Profile Text Styles */
+.profileText {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.profileText .imgBox {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profileText .imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profileText h2 {
+    color: white;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+
+.profileText h2 span {
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+/* Contact Info Styles */
+.contact-info {
+    padding-top: 40px;
+}
+
+.title {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.contact-info ul {
+    position: relative;
+}
+
+.contact-info ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: color 0.3s; /* Add hover transition */
+}
+
+.contact-info ul li:hover {
+    color: var(--secondary-color); /* Change color on hover */
+}
+
+.contact-info ul li .icon {
+    display: inline-block;
+    width: 30px;
+    font-size: 17px;
+    color:  rgb(39, 39, 215);
+}
+
+.contact-info ul li span {
+    color: white;
+    font-weight: 300;
+}
+
+.contact-info.education li {
+    margin-bottom: 18px;
+}
+
+.contact-info.education h5 {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.contact-info.education h4:nth-child(2) {
+    color: white;
+    font-weight: 500;
+}
+
+.contact-info.education h4 {
+    color: white;
+    font-weight: 300;
+}
+
+/* Language Percent Styles */
+.contact-info.language .percent {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background-color: rgb(21, 27, 22);
+    display: block;
+    margin-top: 5px;
+}
+
+.contact-info.language .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color:  rgba(162,0,255,1);
+}
+
+/* Right Side Styles */
+.container .right_side {
+    position: relative;
+    background-color: white;
+    padding: var(--base-padding);
+}
+
+/* About Section Styles */
+.about {
+  margin-bottom: 50px;
+  text-align: justify;
+  line-height: 1.5;
+  word-spacing: -0.5px;
+  hyphens: auto;
+}
+
+.about:last-child {
+    margin-bottom: 0;
+}
+
+.title2 {
+    color:#050445;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #333;
+}
+
+/* About Box Styles */
+.about .box {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.about .box .year_company {
+    min-width: 150px;
+}
+
+.about .box .year_company h5 {
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+}
+
+.about .box .text h4 {
+    text-transform: uppercase;
+    color: rgb(39, 39, 215);
+    font-size: 16px;
+}
+
+/* Skills Section Styles */
+.skills .box {
+    position: relative;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+}
+
+.skills .box h4 {
+    text-transform: uppercase;
+    color: #60646b;
+    font-weight: 500;
+}
+
+.skills .box .percent2 {
+    position: relative;
+    background-color: #9ca4b3;
+    width: 100%;
+    border-radius: 10px;
+    height: 10px;
+}
+
+.skills .box .percent2 div {
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color:#050445;
+}
+
+/* Button Styles */
+.btn-div {
+    display: flex;
+    gap: 15px; /* Adjusted gap between buttons */
+}
+
+.download-btn,
+.edit-btn {
+    appearance: none; /* Reset default styles */
+    background-color: #FFFFFF; /* White background */
+    border-radius: 40em; /* Fully rounded corners */
+    border: none; /* Remove border */
+    box-shadow: #ADCFFF 0 -12px 6px inset; /* Inner shadow */
+    box-sizing: border-box;
+    color: #000000; /* Text color */
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, sans-serif; /* System font */
+    font-size: 1.2rem; /* Base font size */
+    font-weight: 700; /* Font weight */
+    line-height: 3; /* Line height */
+    padding: 0 2rem; /* Padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    transition: all 0.3s; /* Smooth transition */
+}
+
+/* Hover Effects for Buttons */
+.download-btn:hover,
+.edit-btn:hover {
+    background-color: var(--button-hover-color); /* Change color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Stack columns */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .profileText h2 {
+        font-size: 1.2em; /* Smaller font size on mobile */
+    }
+
+    .about .box {
+        flex-direction: column; /* Stack about items */
+        align-items: flex-start; /* Align to the start */
+    }
+
+    .skills .box {
+        grid-template-columns: 1fr; /* Stack skills items */
+    }
+
+    .btn-div {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 0 20px; /* Less padding on mobile */
+    }
+
+    .container {
+        padding: 5px; /* Less padding */
+    }
+
+    .btn-div {
+        gap: 10px; /* Adjust gap */
+    }
+
+    .profileText h2 {
+        font-size: 1.5em; /* Adjust font size for mobile */
+    }
+
+    .contact-info ul li {
+        font-size: 0.9em; /* Smaller font size */
+    }
+}

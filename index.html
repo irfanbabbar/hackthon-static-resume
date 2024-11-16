@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume-Builder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        /* Default desktop view - navigation visible */
+        .navigation {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 30px;
+        }
+
+        /* Mobile view settings */
+        @media (max-width: 768px) {
+            .navigation {
+                display: none; /* Hide by default on mobile */
+                flex-direction: column;
+            }
+
+            .navigation.show {
+                display: flex; /* Show on hamburger click */
+            }
+
+            .hamburger {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <h1 style="color: white;">Resume-Builder</h1>
+        </div>
+
+        <div class="navigation hide">
+            <a href="./index.html">Home</a>
+            <a href="./create-resume.html">Create Resume</a>
+            <a href="./my-resume.html">My Resume</a>
+        </div>
+
+        <!-- Optional Hamburger Menu for Mobile -->
+        <div class="hamburger" onclick="toggleNavigation()">
+            ☰
+        </div>
+    </nav>
+
+
+
+
+    <div class="container">
+        <div class="left_side">
+
+            <div class="profileText">
+                <div class="imgBox">
+                    <img src="./assests/irfan ali babbar.png" alt="">
+                </div>
+                <h2><span id="profileName">Irfan Ali Babbar</span><br><span id="profileDesignation">
+                        Full-stack Developer
+                    </span></h2>
+            </div>
+
+            <div class="contact-info">
+                <h3 class="title">Contact Info</h3>
+                <ul>
+                    <li>
+                        <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                        <span class="text" id="contactPhone">0314-7780555</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                        <span class="text" id="contactEmail">irfan.babbar@gmail.com</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-globe" aria-hidden="true"></i></span>
+                        <span class="text">www.abcwebsite.com</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-linkedin-square" aria-hidden="true"></i></span>
+                        <span class="text" id="contactLinkedIn">www.linkedin.com/in/Irfan Ali Babbar</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                        <span class="text" id="contactAddress">Dha Phase 2 karachi</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact-info education">
+                <h3 class="title">Education</h3>
+                <p style="color: rgb(137, 162, 237) ;">2010-2011</p>
+                <p style="color: rgb(250, 250, 250) ;"> Science</p>
+                <p style="color: rgb(177, 194, 243) ;">School</p>
+                <br>
+                <p style="color:rgb(137, 162, 237);">2012-2014</p>
+                <p style="color:rgb(250, 250, 250) ;">Pre.Medical</p>
+                <p style="color: rgb(177, 194, 243); ;">College</p>
+                <br>
+                <p style="color:rgb(137, 162, 237) ;">2014-2017</p>
+                <p style="color:rgb(250, 250, 250);">Sindh</p>
+                <p style="color: rgb(177, 194, 243);">University</p>
+
+            </div>
+
+            <div class="contact-info language">
+                <h3 class="title">Language</h3>
+                <ul>
+                    <li>
+                        <span class="text">English</span>
+                        <span class="percent">
+                            <div style="width: 80%;"></div>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="text">Urdu</span>
+                        <span class="percent">
+                            <div style="width: 100%;"></div>
+                        </span>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="right_side">
+
+            <div class="about">
+                <h2 class="title2">Profile</h2>
+                <p id="profileDescription">I am a passionate programmer with a strong background in front-end
+                    development and a commitment to crafting intuitive, user-friendly applications. With expertise in
+                    JavaScript, TypeScript, HTML, CSS, and frameworks like React and Next.js, I focus on creating
+                    efficient and visually engaging interfaces that enhance user experiences. My experience spans
+                    multiple projects, from resume builders to interactive websites, where I prioritize clean code and
+                    responsive design. Always eager to learn and adapt, I am dedicated to staying at the forefront of
+                    tech innovations, continuously enhancing my skill set to deliver impactful and reliable solutions.
+                </p>
+            </div>
+
+            <div class="about">
+                <h2 class="title2">Experience</h2>
+                <div class="box">
+                    <div class="year_company">
+                        <h5>2024 - present</h5>
+                    </div>
+                    <div class="text">
+                        <h4>Frontend Develpor</h4>
+                        <p>
+                            Developed and maintained user-friendly web applications, enhancing user experience and
+                            improving functionality.
+                            Collaborated with designers and backend developers to implement responsive design principles
+                            and optimize performance.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="box">
+                    <div class="year_company">
+                        <h5>2024 - present</h5>
+                    </div>
+                    <div class="text">
+                        <h4>Full-stack Developer</h4>
+                        <p>
+                            Designed and implemented server-side logic, database management, and APIs. Ensured high
+                            performance and responsiveness
+                            to requests from the front-end. Worked closely with the development team to maintain
+                            software quality and deliver timely updates.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="year_company">
+                        <h5>2019 - present</h5>
+                    </div>
+                    <div class="text">
+                        <h4>MERN Developer </h4>
+                        <p>
+                            Full-stack development using MongoDB, Express.js, React, and Node.js. Focused on building
+                            scalable web applications
+                            with a strong emphasis on performance and security
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+            <div class="about skills">
+                <h2 class="title2">Professional Skills </h2>
+                <div class="box">
+                    <h4>HTML</h4>
+                    <div class="percent2">
+                        <div style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Css</h4>
+                    <div class="percent2">
+                        <div style="width: 60%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Javascript</h4>
+                    <div class="percent2">
+                        <div style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>React.js</h4>
+                    <div class="percent2">
+                        <div style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Typescript</h4>
+                    <div class="percent2">
+                        <div style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Mongodb</h4>
+                    <div class="percent2">
+                        <div style="width: 30%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Node js</h4>
+                    <div class="percent2">
+                        <div style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Next js</h4>
+                    <div class="percent2">
+                        <div style="width: 80%;"></div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+    </div>
+
+
+
+
+
+    <script>
+        function toggleNavigation() {
+            const navigation = document.querySelector('.navigation');
+            navigation.classList.toggle('show'); // Toggle the 'show' class
+        }
+    </script>
+
+    <script type="text/javascript" src="/app.js"></script>
+</body>
+
+</html>
